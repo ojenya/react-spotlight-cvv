@@ -13,6 +13,10 @@ const SpotlightContainer = styled.div`
   mask: radial-gradient(circle 325px at var(--clip-position), transparent 0%, black 100%);
   -webkit-mask: radial-gradient(circle 325px at var(--clip-position), transparent 0%, black 100%);
   pointer-events: none;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 const ContentWrapper = styled.div`
