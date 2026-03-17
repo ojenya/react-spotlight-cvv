@@ -34,12 +34,12 @@ const Navbar = () => {
         <NavItem>
           <Link to="/">Главная</Link>
         </NavItem>
-        <NavItem>
+        {/* <NavItem>
           <Link to="/about">Обо мне</Link>
         </NavItem>
         <NavItem>
           <Link to="/projects">Проекты</Link>
-        </NavItem>
+        </NavItem> */}
         <NavItem>
           <Link to="/contact">Контакты</Link>
         </NavItem>

@@ -1,18 +1,17 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import styled from '@emotion/styled';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import About from './pages/About';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
-import ErrorBoundary from './components/ErrorBoundary';
-import SpotlightEffect from './components/Spotlight';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import styled from "@emotion/styled";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import ErrorBoundary from "./components/ErrorBoundary";
+import SpotlightEffect from "./components/Spotlight";
+
 
 const AppContainer = styled.div`
-  max-width: 1000px;
+  max-width: 720px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
 `;
 
 function App() {
@@ -21,12 +20,8 @@ function App() {
       <Router>
         <SpotlightEffect>
           <AppContainer>
-            <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AppContainer>
@@ -36,4 +31,4 @@ function App() {
   );
 }
 
-export default App; 
+export default App;
